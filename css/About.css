@@ -1,0 +1,176 @@
+/* 🌐 Общие стили */
+body {
+  font-family: 'Gilroy', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.7;
+}
+
+
+
+/* 📖 Секции About */
+#opis,
+.opis-2 {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.section-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 30px;
+  color: #111;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f04e23;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#opis img,
+.opis-2 img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+#opis img:hover,
+.opis-2 img:hover {
+  transform: scale(1.03);
+}
+
+/* Чередование */
+#opis .text { order: 2; }
+#opis .opo { order: 1; }
+.opis-2 .text { order: 1; }
+.opis-2 .opo { order: 2; }
+
+/* 📩 Форма */
+.great {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.form-at {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-at,
+textarea.input-at {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-at:focus,
+textarea.input-at:focus {
+  border-color: #f04e23;
+  box-shadow: 0 0 0 3px rgba(240,78,35,0.2);
+  outline: none;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: left;
+}
+
+.form-at-btn {
+  background: #f04e23;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-at-btn:hover {
+  background: #c83a16;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* 🦶 Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #f04e23;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* 📱 Адаптив */
+@media (max-width: 900px) {
+  #opis,
+  .opis-2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #opis .text,
+  .opis-2 .text {
+    order: 2;
+  }
+
+  #opis .opo,
+  .opis-2 .opo {
+    order: 1;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu a {
+    margin: 10px;
+  }
+}
