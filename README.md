@@ -23,6 +23,9 @@
 
 ---
 
+[![Посмотреть сайт](https://img.shields.io/badge/Demo-Посмотреть-blue?style=for-the-badge)](https://reiniaw.github.io/Pizza.github.io/index.html#home)
+
+---
 
 Скриншоты
 Главная
@@ -37,4 +40,5 @@ About Us
 
 Проект выполнен в учебных целях.
 Разработчик: Арыстан 
+
 Дизайнеры: Никита и Алихан
